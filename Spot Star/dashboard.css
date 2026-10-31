@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: #f4f4f4;
+  }
+  
+  .dashboard {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 80px;
+    background: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: width 0.5s ease;
+  }
+  
+  .sidebar:hover {
+    width: 260px;
+  }
+  
+  .sidebar .user-profile {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .sidebar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  .sidebar span {
+    display: none;
+  }
+  
+  .sidebar:hover span {
+    display: block;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  .menu {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+  }
+  
+  .menu li:hover {
+    background: #333;
+  }
+  
+  .logout {
+    margin-top: auto;
+    padding: 15px;
+    width: 100%;
+    color: red;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .main-content h1 {
+    margin-bottom: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    background: #fff;
+    flex: 1 1 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .card i {
+    font-size: 2rem;
+    color: #007BFF;
+  }
+  
+  .card h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .card p {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .data-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .data-table h2 {
+    margin-bottom: 15px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background: #007BFF;
+    color: white;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .success {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .pending {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+    }
+  }

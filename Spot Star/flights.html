@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flights | Spot Star</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+<div class="wrapper">
+   <!-- Header/Navbar -->
+   <header>
+    <div class="container nav-container">
+      <div class="logo"><i class="fas fa-star"></i> Spot Star</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hotels.html">Hotels & Villas</a></li>
+          <li><a href="flights.html" class="active">Flights</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="register.php">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flights-section">
+    <div class="container">
+      <h1><i class="fas fa-plane-departure"></i> Book Your Flight</h1>
+      <p>Plan your perfect trip. Choose your flight type and start your journey!</p>
+      <form class="flight-form" action="flight-results.html" method="get">
+        <div class="form-row">
+          <div class="input-group">
+            <label><i class="fas fa-route"></i> From - To</label>
+            <input type="text" name="query" placeholder="e.g. Riyadh - Dubai">
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-calendar-alt"></i> Departing</label>
+            <input type="date" name="depart">
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-calendar-check"></i> Returning</label>
+            <input type="date" name="return">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label><i class="fas fa-users"></i> Passengers</label>
+            <input type="number" name="passengers" min="1" value="1">
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-dollar-sign"></i> Budget</label>
+            <input type="number" name="budget" placeholder="e.g. 1500">
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-suitcase-rolling"></i> Flight Class</label>
+            <select name="class">
+              <option>Economy</option>
+              <option>Business</option>
+              <option>First Class</option>
+            </select>
+          </div>
+          <div class="input-group search-btn-wrap">
+            <button type="submit" class="search-btn">
+              <i class="fas fa-search"></i> Search Flights
+            </button>
+          </div>
+        </div>
+      </form>      
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Add your Property</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">File a claim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Subscribe</h4>
+        <input type="email" placeholder="Enter email">
+        <button class="subscribe-btn">Subscribe</button>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Saudi Ebreez Company</p>
+  </footer>
+</div>
+  </body>
+</html>

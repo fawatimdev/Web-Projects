@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotels & Villas | Spot Star</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+  <!-- Header/Navbar -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo"><i class="fas fa-star"></i> Spot Star</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hotels.html" class="active">Hotels & Villas</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="register.php">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="hotels-section">
+    <div class="container">
+      <h1><i class="fas fa-hotel"></i> Browse Hotels & Villas</h1>
+      <p>Find amazing stays for your next trip. Select your destination and explore top-rated properties.</p>
+      <form action="hotel-results.html" method="get" class="search-form" style="margin: 30px 0;">
+        <div class="input-group">
+          <label><i class="fas fa-map-marker-alt"></i> Destination</label>
+          <input type="text" name="destination" placeholder="e.g. Jeddah">
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-calendar-alt"></i> Check-in</label>
+          <input type="date" name="checkin">
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-calendar-check"></i> Check-out</label>
+          <input type="date" name="checkout">
+        </div>
+        <button type="submit" class="search-btn">
+          <i class="fas fa-search"></i> Search Hotels
+        </button>
+      </form>
+      <div class="hotel-grid">
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Add your Property</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">File a claim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Subscribe</h4>
+        <input type="email" placeholder="Enter email">
+        <button class="subscribe-btn">Subscribe</button>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Saudi Ebreez Company</p>
+  </footer>
+  </div>
+</body>
+</html>

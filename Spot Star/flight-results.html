@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flight Results | Spot Star</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo"><i class="fas fa-star"></i> Spot Star</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flights.html" class="active">Flights</a></li>
+          <li><a href="hotels.html">Hotels & Villas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="register.php">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="results-section">
+    <div class="container">
+      <h1><i class="fas fa-plane"></i> Your Flight Search</h1>
+      <div id="flight-summary" style="margin-bottom: 30px; font-weight: bold; color: #0c3059;"></div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <img src="d.jpg" alt="Flight">
+          <h3>Riyadh → Dubai</h3>
+          <p>Economy Class – Saudi Airlines – $350 – 3h 20m</p>
+        </div>
+        <div class="result-card">
+          <img src="l.jpg" alt="Flight">
+          <h3>Jeddah → London</h3>
+          <p>Business Class – Emirates – $920 – 7h 45m</p>
+        </div>
+      </div>
+
+      <a href="flights.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Flight Search</a>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("query");
+    const depart = params.get("depart");
+    const ret = params.get("return");
+    const passengers = params.get("passengers");
+    const budget = params.get("budget");
+    const flightClass = params.get("class");
+
+    document.getElementById("flight-summary").innerHTML = `
+      <p><strong>From-To:</strong> ${query || '-'} &nbsp;&nbsp;
+      <strong>Depart:</strong> ${depart || '-'} &nbsp;&nbsp;
+      <strong>Return:</strong> ${ret || '-'}</p>
+      <p><strong>Passengers:</strong> ${passengers || '1'} &nbsp;&nbsp;
+      <strong>Budget:</strong> ${budget || 'N/A'} &nbsp;&nbsp;
+      <strong>Class:</strong> ${flightClass || 'Economy'}</p>
+    `;
+  </script>
+</body>
+</html>

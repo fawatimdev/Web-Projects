@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results | Spot Star</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo"><i class="fas fa-star"></i> Spot Star</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hotels.html">Hotels & Villas</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="register.php">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="results-section">
+    <div class="container">
+      <h1><i class="fas fa-search"></i> Your Search Summary</h1>
+      <div id="search-summary" style="margin-bottom: 30px; font-weight: bold; color: #0c3059;"></div>
+
+      <!--Example for illusions results-->
+      <div class="results-grid">
+        <div class="result-card">
+          <img src="d.jpg" alt="Flight">
+          <h3>Jeddah → Dubai</h3>
+          <p>Saudi Airlines – Economy Class – $350 – 3h 20m</p>
+        </div>
+        <div class="result-card">
+          <img src="OIP.jpg" alt="Flight">
+          <h3>Riyadh → Istanbul</h3>
+          <p>Turkish Airlines – Business – $750 – 4h 10m</p>
+        </div>
+      </div>
+
+      <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Search</a>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from");
+    const to = params.get("to");
+    const depart = params.get("depart");
+    const ret = params.get("return");
+    const passengers = params.get("passengers");
+    const budget = params.get("budget");
+    const flightClass = params.get("class");
+
+    document.getElementById("search-summary").innerHTML = `
+      <p><strong>From:</strong> ${from || '-'} &nbsp;&nbsp; <strong>To:</strong> ${to || '-'}</p>
+      <p><strong>Depart:</strong> ${depart || '-'} &nbsp;&nbsp; <strong>Return:</strong> ${ret || '-'}</p>
+      <p><strong>Passengers:</strong> ${passengers || '1'} &nbsp;&nbsp; <strong>Budget:</strong> ${budget || 'N/A'} &nbsp;&nbsp; <strong>Class:</strong> ${flightClass || 'Economy'}</p>
+    `;
+  </script>
+</body>
+</html>

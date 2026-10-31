@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Spot star</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Header/Navbar -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo"><i class="fas fa-star"></i> Spot Star</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="hotels.html">Hotels & Villas</a></li>
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="register.php">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Your Best Guidance</h1>
+            <p><i class="fas fa-plane-departure"></i> Embark On Your Journey To Secure The Ideal Getaway.</p>
+        </div>
+    </section>
+
+    <!-- Search Box -->
+    <section class="search-section">
+      <form class="search-form" action="results.html" method="get">
+        <div class="input-group">
+          <label><i class="fas fa-plane"></i> From</label>
+          <input type="text" name="from" placeholder="Origin City">
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-map-marker-alt"></i> To</label>
+          <input type="text" name="to" placeholder="Destination City">
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-calendar-alt"></i> Departing</label>
+          <input type="date" name="depart">
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-calendar-check"></i> Returning</label>
+          <input type="date" name="return">
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-users"></i> Passengers</label>
+          <input type="number" name="passengers" min="1" value="1">
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-dollar-sign"></i> Budget</label>
+          <input type="number" name="budget" placeholder="$1000">
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-suitcase-rolling"></i> Flight Class</label>
+          <select name="class">
+            <option>Economy</option>
+            <option>Business</option>
+            <option>First Class</option>
+          </select>
+        </div>
+        <button type="submit" class="search-btn"><i class="fas fa-search"></i> Search</button>
+      </form>      
+    </section>
+
+    <!-- Trending Section -->
+<section class="trending">
+    <h2>Trending Now</h2>
+    <div class="destinations">
+      <div class="destination-card">
+        <img src="d.jpg" alt="Dubai">
+        <h3>Dubai</h3>
+      </div>
+      <div class="destination-card">
+        <img src="l.jpg" alt="London">
+        <h3>London</h3>
+      </div>
+      <div class="destination-card">
+        <img src="g.jpg" alt="Jakarta">
+        <h3>Jakarta</h3>
+      </div>
+    </div>
+  </section>  
+
+<!--Vacation-->
+<section class="vacation-jeddah">
+    <div class="container">
+      <div class="vacation-content">
+        <div class="text">
+          <h2>Planning a vacation in Jeddah?</h2>
+          <p>Discover top hotels, attractions, and restaurants in the Bride of the Red Sea. Plan your itinerary easily with Spot Star.</p>
+          <a href="#" class="btn">Start Planning</a>
+        </div>
+        <div class="image">
+          <img src="j.jpg" alt="Vacation in Jeddah">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!--App Section-->
+    <section class="download-app">
+        <div class="container">
+          <h2>Downlload Spot Star app now!</h2>
+          <p>Enjoy an easier and faster ride booking experience through the app.</p>
+          <div class="app-buttons">
+            <a href="#" class="app-store">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 384 512">
+                <path d="M318.7 268.7L55.4 7.4C48.3.3 39.4-2.1 31.3.7S16 13.3 16 22.7V489.3c0 9.4 5.7 17.9 14.3 21.3c2.9 1.2 5.9 1.7 8.7 1.7c5.9 0 11.6-2.3 15.9-6.6l263.3-261.3c4.5-4.5 7-10.6 7-17s-2.5-12.5-7-17z"/>
+              </svg>
+              Download from App Store!
+            </a>
+            <a href="#" class="google-play">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 512 512">
+                <path d="M325.3 234.3L104.4 21.5C98.1 15.3 89.4 12.3 80.8 13.6c-8.6 1.4-16.2 6.4-20.5 13.9S56 47.5 56 56.7v398.5c0 9.2 3.4 17.9 9.3 24.5c5.9 6.6 14 10.3 22.4 10.3c4.3 0 8.6-1 12.6-2.9l220.9-212.8c5.6-5.4 8.8-12.9 8.8-20.7s-3.2-15.3-8.7-20.3z"/>
+              </svg>
+              Download from Google Play!
+            </a>
+          </div>
+        </div>
+      </section>      
+      
+    <!-- Footer -->
+    <footer>
+        <div class="footer-columns">
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Add your Property</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">File a claim</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Subscribe</h4>
+                <input type="email" placeholder="Enter email">
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Saudi Ebreez Company</p>
+    </footer>
+  </div>   
+</body>
+</html>

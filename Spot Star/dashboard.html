@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spot Star Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-profile">
+        <img src="girl.jpg" alt="User">
+        <span>Fajr</span>
+      </div>
+      <ul class="menu">
+        <li><i class="fas fa-chart-line"></i><span>Dashboard</span></li>
+        <li><i class="fas fa-hotel"></i><span>Hotels</span></li>
+        <li><i class="fas fa-plane"></i><span>Flights</span></li>
+        <li><i class="fas fa-user"></i><span>Users</span></li>
+        <li><i class="fas fa-cog"></i><span>Settings</span></li>
+      </ul>
+      <div class="logout">
+        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Welcome to Spot Star Dashboard</h1>
+      <div class="cards">
+        <div class="card"><i class="fas fa-hotel"></i><h3>Hotels</h3><p>32</p></div>
+        <div class="card"><i class="fas fa-plane-departure"></i><h3>Flights</h3><p>19</p></div>
+        <div class="card"><i class="fas fa-user"></i><h3>Users</h3><p>105</p></div>
+        <div class="card"><i class="fas fa-hand-holding-usd"></i><h3>Revenue</h3><p>$5,300</p></div>
+      </div>
+
+      <!-- Table -->
+      <div class="data-table">
+        <h2>Recent Bookings</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Luxury Dubai</td>
+              <td>Hotel</td>
+              <td>$200</td>
+              <td class="success">Confirmed</td>
+            </tr>
+            <tr>
+              <td>Jakarta Flight</td>
+              <td>Flight</td>
+              <td>$150</td>
+              <td class="pending">Pending</td>
+            </tr>
+            <tr>
+              <td>London Villa</td>
+              <td>Hotel</td>
+              <td>$180</td>
+              <td class="success">Confirmed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

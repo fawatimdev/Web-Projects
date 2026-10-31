@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hotel Results | Spot Star</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo"><i class="fas fa-star"></i> Spot Star</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hotels.html" class="active">Hotels & Villas</a></li>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="results-section">
+    <div class="container">
+      <h1><i class="fas fa-hotel"></i> Hotel Search Results</h1>
+      <div id="hotel-summary" style="margin-bottom: 30px; font-weight: bold; color: #0c3059;"></div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <img src="ht.jpg" alt="Hotel">
+          <h3>Red Sea Resort</h3>
+          <p>Jeddah - Beachfront luxury with private villas. $280/night</p>
+        </div>
+        <div class="result-card">
+          <img src="OIP.jpg" alt="Hotel">
+          <h3>Jeddah Corniche Inn</h3>
+          <p>Modern city hotel with quick access to cafes and malls. $190/night</p>
+        </div>
+        <div class="result-card">
+          <img src="pexels-photo-82857.jpg" alt="Hotel">
+          <h3>Golden Sands Suites</h3>
+          <p>Perfect for families, located near the Red Sea Mall. $210/night</p>
+        </div>
+      </div>
+
+      <a href="hotels.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Hotel Search</a>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const dest = params.get("destination");
+    const checkin = params.get("checkin");
+    const checkout = params.get("checkout");
+
+    document.getElementById("hotel-summary").innerHTML = `
+      <p><strong>Destination:</strong> ${dest || 'Any'} &nbsp;&nbsp; 
+      <strong>Check-in:</strong> ${checkin || 'N/A'} &nbsp;&nbsp; 
+      <strong>Check-out:</strong> ${checkout || 'N/A'}</p>
+    `;
+  </script>
+</body>
+</html>
